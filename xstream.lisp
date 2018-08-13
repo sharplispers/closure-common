@@ -109,7 +109,7 @@
   
   ;; the buffer itself
   (buffer +null-buffer+ 
-          :type (simple-array buffer-byte (*)))
+          #-abcl :type #-abcl (simple-array buffer-byte (*)))
   ;; points to the next element of `buffer' containing the next rune
   ;; about to be read.
   (read-ptr      0 :type buffer-index)
